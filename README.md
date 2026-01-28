@@ -73,19 +73,19 @@ The EDA Corpus focuses on Python examples rather than TCL because:
 - Sequencing operations correctly
 - Understanding dependencies
 
-### Current Limitations (20-40% Quality)
+### Current Limitations (60-70% Quality)
 
-⚠️ **Complex Script Generation**
+ **Complex Script Generation**
 - Multi-step TCL scripts have accuracy issues
 - Command parameters may need verification
 - Some hallucinated commands (training data artifact)
 
-⚠️ **TCL vs Python Mix**
+ **TCL vs Python Mix**
 - Model trained primarily on Python examples
 - TCL generation less reliable than Python
 - May mix Python patterns into TCL code
 
-⚠️ **Full Automation**
+ **Full Automation**
 - Cannot reliably execute complete RTL-to-GDS flows without supervision
 - Requires human validation for production use
 - Template-based approach recommended for critical paths
