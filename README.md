@@ -14,15 +14,15 @@
 </p>
 
 
-## 🎯 What This Project Is
+##  What This Project Is
 
 An **autonomous agent system** that assists with OpenROAD EDA workflows through:
 
-✅ **Intelligent Planning** - Breaks down high-level goals into executable steps  
-✅ **Code Generation** - Produces Python/TCL snippets for OpenROAD tasks  
-✅ **Self-Validation** - Checks code quality before execution  
-✅ **Auto-Correction** - Fixes common mistakes automatically  
-✅ **Workflow Guidance** - Explains RTL-to-GDS flow and best practices  
+**Intelligent Planning** - Breaks down high-level goals into executable steps  
+**Code Generation** - Produces Python/TCL snippets for OpenROAD tasks  
+ **Self-Validation** - Checks code quality before execution  
+ **Auto-Correction** - Fixes common mistakes automatically  
+ **Workflow Guidance** - Explains RTL-to-GDS flow and best practices  
 
 **Architecture:** Single LLM-powered agent with structured workflow components (Planner → Generator → Validator → Corrector → Executor → Decision Engine)
 
@@ -54,21 +54,21 @@ The EDA Corpus focuses on Python examples rather than TCL because:
 
 ---
 
-## ⚠️ Current Capabilities & Limitations
+##  Current Capabilities & Limitations
 
 ### What Works Well (60-80% Quality)
 
-✅ **Explaining OpenROAD Concepts**
+ **Explaining OpenROAD Concepts**
 - Understanding of RTL-to-GDS flow
 - Tool-specific knowledge (DFSPlacer, OCts, OpenSTA)
 - File format requirements (.def, .lef, .lib)
 
-✅ **Python API Code Assistance**
+**Python API Code Assistance**
 - Correct import statements (`from openroad import Tech, Design`)
 - Basic API structure and patterns
 - Simple task snippets
 
-✅ **Workflow Planning**
+**Workflow Planning**
 - Breaking down complex goals into steps
 - Sequencing operations correctly
 - Understanding dependencies
@@ -92,7 +92,7 @@ The EDA Corpus focuses on Python examples rather than TCL because:
 
 ---
 
-## 🚧 Ongoing Development
+##  Ongoing Development
 
 ### Active Improvements
 
@@ -115,14 +115,14 @@ The EDA Corpus focuses on Python examples rather than TCL because:
 
 ---
 
-## 🔥 Example: Domain Knowledge vs Generic LLMs
+##  Example: Domain Knowledge vs Generic LLMs
 
 ### Reading Verilog Files
 
 <table>
 <tr>
-<th width="50%">❌ Base Mistral-7B (Generic)</th>
-<th width="50%">✅ EDA Corpus Fine-tuned</th>
+<th width="50%"> Base Mistral-7B (Generic)</th>
+<th width="50%"> EDA Corpus Fine-tuned</th>
 </tr>
 <tr>
 <td>
@@ -164,11 +164,11 @@ Evaluated on 8 OpenROAD knowledge and code generation tasks:
 
 | Category | Base Mistral | Fine-tuned | Improvement |
 |----------|-------------|-----------|-------------|
-| **Concept Explanation** | 40/100 | 75/100 | +87% ✅ |
-| **Python API Knowledge** | 30/100 | 70/100 | +133% ✅ |
-| **Workflow Guidance** | 35/100 | 72/100 | +106% ✅ |
-| **Simple Code Snippets** | 35/100 | 65/100 | +86% ✅ |
-| **Complex TCL Scripts** | 30/100 | 40/100 | +33% ⚠️ |
+| **Concept Explanation** | 40/100 | 75/100 | +87%  |
+| **Python API Knowledge** | 30/100 | 70/100 | +133%  |
+| **Workflow Guidance** | 35/100 | 72/100 | +106% |
+| **Simple Code Snippets** | 35/100 | 65/100 | +86%  |
+| **Complex TCL Scripts** | 30/100 | 40/100 | +33%  |
 
 **Overall:** Base 40/100 → Fine-tuned 64/100 (+60% improvement)
 
@@ -176,7 +176,7 @@ Evaluated on 8 OpenROAD knowledge and code generation tasks:
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Installation
 
@@ -275,9 +275,9 @@ python test_autonomous_agent.py --full -o my_test_report.json
 
 ---
 
-## 🎓 Use Cases
+##  Use Cases
 
-### ✅ Recommended Uses
+###  Recommended Uses
 
 1. **Learning OpenROAD**
    - Understanding concepts and workflows
@@ -299,18 +299,18 @@ python test_autonomous_agent.py --full -o my_test_report.json
    - Research prototypes
    - Algorithm exploration
 
-### ⚠️ Not Recommended For
+###  Not Recommended For
 
-1. ❌ **Production Chip Tapeouts** - Without extensive human review
-2. ❌ **Critical Path Automation** - Validation required
-3. ❌ **Safety-Critical Designs** - Human oversight mandatory
-4. ❌ **Replacing Verified Scripts** - Use as reference, not replacement
+1.  **Production Chip Tapeouts** - Without extensive human review
+2.  **Critical Path Automation** - Validation required
+3.  **Safety-Critical Designs** - Human oversight mandatory
+4.  **Replacing Verified Scripts** - Use as reference, not replacement
 
 **Always validate generated code** against OpenROAD documentation and test thoroughly.
 
 ---
 
-## 📈 Training Details
+##  Training Details
 
 ### Model Architecture
 - **Base Model:** Mistral-7B-Instruct-v0.2 (7 billion parameters)
@@ -346,7 +346,7 @@ python test_autonomous_agent.py --full -o my_test_report.json
 
 ---
 
-## 🧪 Testing & Validation
+##  Testing & Validation
 
 ### Comprehensive Test Suite
 
@@ -367,16 +367,16 @@ python test_autonomous_agent.py --integration
 ```
 
 ### Test Coverage
-- ✅ Component unit tests (7 components)
-- ✅ Integration tests (component interactions)
-- ✅ End-to-end flow tests (mock mode)
-- ✅ Error handling tests
-- ✅ Code quality evaluation
-- ⚠️ Real OpenROAD execution (requires installation)
+-  Component unit tests (7 components)
+-  Integration tests (component interactions)
+-  End-to-end flow tests (mock mode)
+-  Error handling tests
+-  Code quality evaluation
+-  Real OpenROAD execution (requires installation)
 
 ---
 
-## 📚 Repository Structure
+##  Repository Structure
 
 ```
 openroad-ai-assistant/
@@ -409,7 +409,7 @@ openroad-ai-assistant/
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! Areas where help is needed:
 
@@ -440,25 +440,25 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 ## 📊 Roadmap
 
 ### Current (v0.1) - Educational Assistant
-- ✅ Concept explanations
-- ✅ Python API code assistance
-- ✅ Workflow guidance
-- ✅ Basic autonomous planning
-- ⚠️ Limited complex automation
+-  Concept explanations
+-  Python API code assistance
+-  Workflow guidance
+-  Basic autonomous planning
+-  Limited complex automation
 
 ### Next (v0.2) - Hybrid Approach
-- 🚧 Template library for critical operations
-- 🚧 Clean TCL-only training data
-- 🚧 Real OpenROAD validation pipeline
-- 🚧 Improved error detection
-- 🚧 Better TCL generation
+-  Template library for critical operations
+-  Clean TCL-only training data
+-  Real OpenROAD validation pipeline
+-  Improved error detection
+-  Better TCL generation
 
 ### Future (v1.0) - Production-Ready
-- 🔮 80%+ code generation accuracy
-- 🔮 Full RTL-to-GDS automation support
-- 🔮 Real-time OpenROAD integration
-- 🔮 Multi-design optimization
-- 🔮 Community template library
+-  80%+ code generation accuracy
+-  Full RTL-to-GDS automation support
+-  Real-time OpenROAD integration
+-  Multi-design optimization
+-  Community template library
 
 ---
 
@@ -504,7 +504,7 @@ Training data (EDA Corpus): **CC BY 4.0** - See [EDA Corpus License](https://git
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **[EDA Corpus](https://github.com/facebookresearch/EDA-Corpus)** - Training dataset (Wu et al., 2024)
 - **[OpenROAD Project](https://theopenroadproject.org/)** - Open-source EDA tools
@@ -514,7 +514,7 @@ Training data (EDA Corpus): **CC BY 4.0** - See [EDA Corpus License](https://git
 
 ---
 
-## 📧 Contact & Support
+##  Contact & Support
 
 - **Author:** Senthil Kumar M.
 - **Institution:** Northeastern University
@@ -524,24 +524,24 @@ Training data (EDA Corpus): **CC BY 4.0** - See [EDA Corpus License](https://git
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 This is a research prototype and educational tool. Generated code should be:
-- ✅ Reviewed by humans before use
-- ✅ Tested in your specific environment
-- ✅ Validated against OpenROAD documentation
-- ✅ Version-controlled
-- ✅ Backed up before automation
+-  Reviewed by humans before use
+-  Tested in your specific environment
+-  Validated against OpenROAD documentation
+-  Version-controlled
+-  Backed up before automation
 
 **The authors are not responsible for issues arising from use of generated code in production environments.**
 
 ---
 
-## 🔍 Keywords
+##  Keywords
 
 Electronic Design Automation, EDA, OpenROAD, RTL-to-GDS, Physical Design, Large Language Models, LLM, Code Generation, Autonomous Agents, LoRA Fine-tuning, Mistral, VLSI, Chip Design
 
 ---
 
-**Project Status:** 🚧 Active Development | 🎓 Educational Tool | 💻 Code Assistant  
+**Project Status:** Active Development |  Educational Tool |  Code Assistant  
 **Goal:** Production-ready automation with human-in-the-loop validation
