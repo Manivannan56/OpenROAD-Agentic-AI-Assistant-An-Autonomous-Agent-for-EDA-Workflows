@@ -1,0 +1,348 @@
+
+# ============================================================================
+# EDA-Corpus / OpenROAD AI Assistant - .gitignore
+# ============================================================================
+
+# ============================================================================
+# LARGE MODEL FILES (Don't commit to Git - use Git LFS or external storage)
+# ============================================================================
+# Model weights and checkpoints
+
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.h5
+*.pb
+*.onnx
+*.tflite
+
+# Model directories
+models/
+cached_model/
+checkpoints/
+model_cache/
+.cache/huggingface/
+huggingface_cache/
+
+# Adapter weights (fine-tuned LoRA)
+**/adapter_model.bin
+**/adapter_model.safetensors
+**/pytorch_model.bin
+
+# ============================================================================
+# DATA FILES (Often too large for Git)
+# ============================================================================
+# Data directories
+data/
+datasets/
+Augmented_Data/
+Non-Augmented_Data/
+raw_data/
+processed_data/
+
+# Specific data formats
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.arrow
+*.feather
+
+# Exceptions: Keep small example files
+!examples/**/*.csv
+!examples/**/*.json
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+test_results/
+
+# ============================================================================
+# JUPYTER NOTEBOOKS
+# ============================================================================
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+# Jupyter Notebook metadata
+.ipynb
+
+# ============================================================================
+# ENVIRONMENTS
+# ============================================================================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.env
+
+# Conda
+conda_env/
+.conda/
+
+# ============================================================================
+# IDE / EDITORS
+# ============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Vim
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================================
+# OS FILES
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================================================
+# LOGS & TEMPORARY FILES
+# ============================================================================
+*.log
+*.out
+*.err
+logs/
+log/
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Training logs
+wandb/
+tensorboard/
+mlruns/
+lightning_logs/
+
+# ============================================================================
+# TEST & EVALUATION OUTPUT
+# ============================================================================
+test_*.json
+test_*.log
+test_*.txt
+*_test_results.json
+test_report*.json
+evaluation_results/
+comparison_results*.json
+flow_log.json
+*_output.json
+
+# ============================================================================
+# OPENROAD SPECIFIC
+# ============================================================================
+# OpenROAD build artifacts
+*.def
+*.gds
+*.odb
+*.sdc
+*.spef
+*.db
+
+# OpenROAD logs
+openroad.log
+openroad_*.log
+
+# Design outputs
+output/
+results/
+*.rpt
+*.rpt.*
+
+# ============================================================================
+# TRAINING & FINE-TUNING
+# ============================================================================
+# Training checkpoints
+checkpoint-*/
+runs/
+outputs/
+training_output/
+
+# Weights & Biases
+wandb/
+
+# TensorBoard
+events.out.tfevents.*
+
+# ============================================================================
+# DOCUMENTATION BUILD
+# ============================================================================
+docs/_build/
+docs/.doctrees/
+site/
+_build/
+.sphinx/
+
+# ============================================================================
+# BACKUP FILES
+# ============================================================================
+*.bak
+*.backup
+*.old
+*_backup
+*_old
+backup/
+
+# ============================================================================
+# LARGE ASSETS (Commit selectively)
+# ============================================================================
+# Large screenshots/images (>1MB)
+# assets/*.png
+# assets/*.jpg
+
+# Videos
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ============================================================================
+# SECRETS & CREDENTIALS
+# ============================================================================
+*.key
+*.pem
+*.p12
+secrets.yaml
+credentials.json
+.env.local
+.env.*.local
+
+# API keys
+*api_key*
+*_token
+.token
+
+# ============================================================================
+# COMPRESSED FILES
+# ============================================================================
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bz2
+*.gz
+
+# Exceptions: Keep release archives in releases/
+!releases/*.zip
+!releases/*.tar.gz
+
+# ============================================================================
+# PACKAGE MANAGER
+# ============================================================================
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Poetry
+poetry.lock
+
+
+
+
+
+# Verify it was created
+ls -lh .gitignore
+
+# Check end of file
+tail -5 .gitignore
