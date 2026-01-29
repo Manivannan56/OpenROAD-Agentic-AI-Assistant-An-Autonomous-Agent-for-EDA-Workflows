@@ -381,7 +381,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 -  Clean TCL-only training data
 -  Real OpenROAD validation pipeline
 -  Improved error detection
--  Better TCL generation
+-  Better TCL code generation
 
 ### Future (v1.0) - Production-Ready
 -  80%+ code generation accuracy
@@ -446,9 +446,9 @@ Training data (EDA Corpus): **CC BY 4.0** - See [EDA Corpus License](https://git
 
 ##  Contact & Support
 
-- **Author:** Senthil Kumar M.
+- **Author:** Manivannan Senthil Kumar
 - **Institution:** Northeastern University
-- **Email:** [kumar.se@northeastern.edu]
+- **Email:** [senthilkumar.m@northeastern.edu]
 - **Issues:** [GitHub Issues](https://github.com/yourusername/openroad-ai-assistant/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/yourusername/openroad-ai-assistant/discussions)
 
