@@ -172,79 +172,9 @@ Evaluated on 8 OpenROAD knowledge and code generation tasks:
 
 **Overall:** Base 40/100 → Fine-tuned 64/100 (+60% improvement)
 
-*Detailed evaluation: [evaluation/comparison_results.json](evaluation/comparison_results.json)*
 
 ---
 
-##  Quick Start
-
-### Installation
-
-```bash
-# Clone repository
-git clone https://github.com/yourusername/openroad-ai-assistant.git
-cd openroad-ai-assistant
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Download model and adapter
-# [Instructions for downloading fine-tuned weights]
-```
-
-### Basic Usage - Simple Code Generation
-
-```python
-from simple_agent import SimpleAgent
-
-# Initialize agent
-agent = SimpleAgent(
-    base_model="mistralai/Mistral-7B-Instruct-v0.2",
-    adapter_path="./models/openroad_finetuned"
-)
-
-# Get code snippet
-response = agent.ask("How do I read a Verilog file in OpenROAD?")
-print(response)
-```
-
-### Autonomous Flow Agent
-
-```python
-from autonomous_agent import AutonomousFlowAgent
-
-# Initialize autonomous agent
-agent = AutonomousFlowAgent(
-    base_model="mistralai/Mistral-7B-Instruct-v0.2",
-    adapter_path="./models/openroad_finetuned"
-)
-
-# Run in mock mode (for testing)
-result = agent.run_autonomous_flow(
-    user_goal="Create floorplan with 70% utilization",
-    max_iterations=2,
-    use_mock=True  # Set False for real OpenROAD execution
-)
-
-print(f"Status: {result['status']}")
-print(f"Steps completed: {result['total_steps']}")
-```
-
-### Testing the Agent
-
-```bash
-# Run comprehensive component tests
-python test_autonomous_agent.py --full --verbose
-
-# Test specific components
-python test_autonomous_agent.py --component planner
-python test_autonomous_agent.py --component validator
-
-# Generate test report
-python test_autonomous_agent.py --full -o my_test_report.json
-```
-
----
 
 ## 🏗️ Agent Architecture
 
