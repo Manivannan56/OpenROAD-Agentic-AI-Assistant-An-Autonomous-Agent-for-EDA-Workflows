@@ -73,7 +73,7 @@ The EDA Corpus focuses on Python examples rather than TCL because:
 - Sequencing operations correctly
 - Understanding dependencies
 
-### Current Limitations (60-70% Quality)
+### Current Limitations (40-50% Quality)
 
  **Complex Script Generation**
 - Multi-step TCL scripts have accuracy issues
